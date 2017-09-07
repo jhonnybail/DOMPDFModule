@@ -16,8 +16,8 @@
     },
     "autoload": {
         "psr-4": {
-            "DOMPDFModule\\": "src/DOMPDFModule",
-            "DOMPDFModuleTest\\": "tests/DOMPDFModuleTest"
+            "DOMPDFModule\\": "src",
+            "DOMPDFModuleTest\\": "tests"
         }
     }
 }
