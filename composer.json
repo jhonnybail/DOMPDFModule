@@ -1,4 +1,5 @@
 {
+    "name": "moukail/dompdf-module",
     "type": "library",
     "require": {
         "php": "^5.6 || ^7.0",
