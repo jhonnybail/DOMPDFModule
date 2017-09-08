@@ -94,10 +94,9 @@ class DOMPDFFactory implements FactoryInterface
         //require_once __DIR__ . '/../../../config/module.compat.php';
         require_once __DIR__ . '/../../config/module.compat.php';
 
-
         $options = new Options();
         //$options->set('tempDir', __DIR__ . '/site_uploads/dompdf_temp');
-        $options->set('isRemoteEnabled', true);
+        $options->set('isRemoteEnabled', false);
         //$options->set('debugKeepTemp', TRUE);
         //$options->set('chroot', '/'); // Just for testing :)
         $options->set('isHtml5ParserEnabled', true);
