@@ -97,7 +97,7 @@ class DOMPDFFactory implements FactoryInterface
 
         $options = new Options();
         //$options->set('tempDir', __DIR__ . '/site_uploads/dompdf_temp');
-        $options->set('isRemoteEnabled', TRUE);
+        $options->set('isRemoteEnabled', true);
         //$options->set('debugKeepTemp', TRUE);
         //$options->set('chroot', '/'); // Just for testing :)
         $options->set('isHtml5ParserEnabled', true);
