@@ -31,8 +31,7 @@ return [
          *
          * *Please note the trailing slash.*
          */
-        //'font_directory' => __DIR__ . '/../../../dompdf/dompdf/lib/fonts/',
-        'font_directory' => __DIR__ . '/../../../vendor/dompdf/dompdf/lib/fonts/',
+        'font_directory' => __DIR__ . '/../../../dompdf/dompdf/lib/fonts/',
 
         /**
          * The location of the DOMPDF font cache directory
@@ -42,8 +41,7 @@ return [
          * It contains the .afm files, on demand parsed, converted to php syntax and cached
          * This folder can be the same as DOMPDF_FONT_DIR
          */
-        //'font_cache_directory' => __DIR__ . '/../../../dompdf/dompdf/lib/fonts/',
-        'font_cache_directory' => __DIR__ . '/../../../vendor/dompdf/dompdf/lib/fonts/',
+        'font_cache_directory' => __DIR__ . '/../../../dompdf/dompdf/lib/fonts/',
 
         /**
          * The location of a temporary directory.
@@ -66,8 +64,7 @@ return [
          * direct class use like:
          * $dompdf = new DOMPDF();	$dompdf->load_html($htmldata); $dompdf->render(); $pdfdata = $dompdf->output();
          */
-        //'chroot' => realpath(__DIR__ . '/../../../dompdf/dompdf/'),
-        'chroot' => realpath(__DIR__ . '/../../../vendor/dompdf/dompdf/'),
+        'chroot' => realpath(__DIR__ . '/../../../dompdf/dompdf/'),
 
         /**
          * Whether to use Unicode fonts or not.
@@ -148,7 +145,7 @@ return [
          *
          * @see CPDF_Adapter::PAPER_SIZES for valid sizes
          */
-        'default_paper_size' => 'letter',
+        'default_paper_size' => 'a4',
 
         /**
          * The default font family
@@ -240,8 +237,7 @@ return [
          * The debug output log
          * @var string
          */
-        //'log_output_file' => __DIR__ . '/../../data/dompdf/log',
-        'log_output_file' => __DIR__ . '/../../../data/dompdf/log',
+        'log_output_file' => __DIR__ . '/../../data/dompdf/log',
 
         /**
          * A ratio applied to the fonts height to be more like browsers' line height
@@ -281,7 +277,8 @@ return [
              * DOMPDF itself has issues rendering twice in a row so we force a
              * new instance to be created.
              */
-            'DOMPDF' => false
+            'DOMPDF' => false,
+            'ViewPdfRenderer' => false
         ],
         'factories' => [
             'DOMPDF'          => __NAMESPACE__ . '\Service\DOMPDFFactory',
