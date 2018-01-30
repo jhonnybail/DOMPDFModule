@@ -94,12 +94,40 @@ class DOMPDFFactory implements FactoryInterface
         //require_once __DIR__ . '/../../../config/module.compat.php';
         require_once __DIR__ . '/../../config/module.compat.php';
 
-        $options = new Options();
+         $options = [
+            'temp_dir'                   => $config['temporary_directory'],
+            'font_dir'                   => $config['font_directory'],
+            'font_cache'                 => $config['font_cache_directory'],
+            'chroot'                     => $config['chroot'],
+            'log_output_file'            => $config['log_output_file'],
+            'default_media_type'         => $config['default_media_type'],
+            'default_paper_size'         => $config['default_paper_size'],
+            'default_font'               => $config['default_font'],
+            'dpi'                        => $config['dpi'],
+            'font_height_ratio'          => $config['font_height_ratio'],
+            'is_php_enabled'             => $config['enable_php'],
+            'is_remote_enabled'          => $config['enable_remote'],
+            'is_javascript_enabled'      => $config['enable_javascript'],
+            'is_html5_parser_enabled'    => $config['enable_html5parser'],
+            'is_font_subsetting_enabled' => $config['enable_fontsubsetting'],
+            'debug_png'                  => $config['debug_png'],
+            'debug_keep_temp'            => $config['debug_keep_temp'],
+            'debug_css'                  => $config['debug_css'],
+            'debug_layout'               => $config['debug_layout'],
+            'debug_layout_links'         => $config['debug_layout_links'],
+            'debug_layout_blocks'        => $config['debug_layout_blocks'],
+            'debug_layout_inline'        => $config['debug_layout_inline'],
+            'debug_layout_padding_box'   => $config['debug_layout_padding_box'],
+            'pdf_backend'                => $config['pdf_backend'],
+            //'pdflib_license'             => $config['pdflib_license']
+        ];
+
+        $options = new Options($options);
         //$options->set('tempDir', __DIR__ . '/site_uploads/dompdf_temp');
-        $options->set('isRemoteEnabled', false);
+        //$options->set('isRemoteEnabled', false);
         //$options->set('debugKeepTemp', TRUE);
         //$options->set('chroot', '/'); // Just for testing :)
-        $options->set('isHtml5ParserEnabled', true);
+        //$options->set('isHtml5ParserEnabled', true);
 
         $pdf = new Dompdf($options);
         return $pdf;

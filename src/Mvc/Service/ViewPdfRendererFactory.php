@@ -19,8 +19,7 @@ class ViewPdfRendererFactory implements FactoryInterface
     {
         $viewResolver = $container->get('ViewResolver');
         $viewRenderer = $container->get('ViewRenderer');
-        //$domPdf       = $container->get('DOMPDF');
-        $domPdf       = new \Dompdf\Dompdf();
+        $domPdf       = $container->get('DOMPDF');
 
         $pdfRenderer = new PdfRenderer();
         $pdfRenderer->setResolver($viewResolver);
