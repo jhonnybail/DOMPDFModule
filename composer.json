@@ -1,8 +1,13 @@
 {
-    "name": "moukail/dompdf-module",
+    "name": "solutio/dompdf-module",
     "type": "library",
+    "extra": {
+        "zf": {
+            "module": "DOMPDFModule"
+        }
+    },
     "require": {
-        "php": "^5.6 || ^7.0",
+        "php": "^7",
         "dompdf/dompdf": "dev-master",
         "zendframework/zend-eventmanager": "^3.2",
         "zendframework/zend-servicemanager": "^3.3",
