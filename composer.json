@@ -1,6 +1,7 @@
 {
     "name": "solutio/dompdf-module",
     "type": "library",
+    "license": "MIT",
     "extra": {
         "zf": {
             "module": "DOMPDFModule"
@@ -8,7 +9,7 @@
     },
     "require": {
         "php": "^7",
-        "dompdf/dompdf": "dev-master",
+        "dompdf/dompdf": "v0.8.0",
         "zendframework/zend-eventmanager": "^3.2",
         "zendframework/zend-servicemanager": "^3.3",
         "zendframework/zend-view": "^2.9"
